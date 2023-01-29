@@ -1,10 +1,28 @@
-# My Personal Project
+# Divide and Thrive
 
-## A subtitle
+## About The Application
 
-A *bulleted* list:
-- item 1
-- item 2
-- item 3
+**What is the purpose of the application?**
+- The purpose is to create an application which will keep track of the daily or weekly tasks of the Home/apartment to be done in general.
+- The application will help in listing down all the daily/ weekly tasks and will use an *algorithm* to distribute the tasks between members.
+- Once a member does a task, he/she can mark as done.
+- If a Task is not done on time by the designated member, he or she will be fined accordingly.
 
-An example of text with **bold** and *italic* fonts.  
+Who will use it?
+- This app can generally be useful for students who share apartments with fellow students.
+- This app can also be useful to family where home tasks are distributed.
+- This app can also serve as useful in accommodations where people share tasks among them.
+
+Why is this project of Interest to you?
+- I personally live in a shared apartment and often come across the conflict upon the completion of shared task.
+- Using this app will make the mutual tasks interesting as every single member will get a random new task and hence it will them to build up their skill set.
+
+
+## USER STORIES
+As a user, I will be able to:
+- Schedule my week ahead of time.
+- Come across fewer conflicts with other members. 
+- Get a financial benefit if someone doesn't do their work on time and hence that money can be distributed among others.
+
+
+  
