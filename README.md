@@ -20,9 +20,10 @@ Why is this project of Interest to you?
 
 ## USER STORIES
 As a user, I will be able to:
-- Schedule my week ahead of time.
-- Come across fewer conflicts with other members. 
-- Get a financial benefit if someone doesn't do their work on time and hence that money can be distributed among others.
+- As a user, I will be able to add chores into the program
+- As a user,I will be able to add other house members in the program.
+- As a user, I will be able to distribute tasks among the house members.
+- As a user, I will be able to charge fines to people who don't complete tasks till end of week.
 
 
   
