@@ -13,7 +13,7 @@ public class ChoresListTest {
     void runBefore(){
         choresList1 = new ChoresList();
         choresList2 = new ChoresList();
-        Member arun = new Member("arun","dishes");
+        new Member("arun", "dishes");
 
     }
     @Test

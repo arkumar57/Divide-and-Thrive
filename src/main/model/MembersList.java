@@ -5,11 +5,9 @@ import java.util.List;
 
 public class MembersList {
 
-    private List<Member> listOfMembers = new ArrayList<>();
+    private final List<Member> listOfMembers = new ArrayList<>();
 
-    public MembersList() {
-        this.listOfMembers = listOfMembers;
-    }
+
 
     public List<Member> getListOfMembers() {
         return listOfMembers;

@@ -20,7 +20,7 @@ public class ChoresApp {
 
     private void runChore() {
         boolean keepGoing = true;
-        String command = null;
+        String command;
 
         init();
 
@@ -68,7 +68,7 @@ public class ChoresApp {
 
     private void addMembers() {
         System.out.println("Enter No of Members in House: ");
-        Integer quantity = input.nextInt();
+        int quantity = input.nextInt();
         input.nextLine();
 
         if (quantity >= 2) {

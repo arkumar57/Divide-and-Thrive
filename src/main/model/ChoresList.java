@@ -4,12 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ChoresList {
-    private List<Chore> listOfChores = new ArrayList<>();
-
-    public ChoresList() {
-        this.listOfChores = listOfChores;
-    }
-
+    private final List<Chore> listOfChores = new ArrayList<>();
 
     public List<Chore> getListOfChores() {
         return listOfChores;

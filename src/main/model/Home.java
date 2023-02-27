@@ -4,8 +4,8 @@ import java.util.Collections;
 import java.util.List;
 
 public class Home {
-    private ChoresList listOfChores;
-    private MembersList listOfMembers;
+    private final ChoresList listOfChores;
+    private final MembersList listOfMembers;
 
     public Home(ChoresList listOfChores,MembersList listOfMembers) {
         this.listOfChores = listOfChores;
