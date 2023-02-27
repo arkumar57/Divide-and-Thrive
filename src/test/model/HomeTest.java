@@ -3,13 +3,13 @@ package model;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertNull;
 
 class HomeTest {
 
     @Test
     void testChoresAssignment() {
         ChoresList choresList1 = new ChoresList();
-        ChoresList choresList2 = new ChoresList();
         MembersList membersList1 = new MembersList();
         MembersList membersList2 = new MembersList();
         Member kumar = new Member("kumar", "Washing");
