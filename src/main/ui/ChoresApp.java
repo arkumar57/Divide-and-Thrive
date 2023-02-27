@@ -10,7 +10,6 @@ public class ChoresApp {
     private Scanner input;
     private ChoresList listOfChores;
     private MembersList listOfMembers;
-    private Home home;
 
 
     public ChoresApp() {
@@ -98,7 +97,7 @@ public class ChoresApp {
     }
 
     private void assignment() {
-        home = new Home(listOfChores, listOfMembers);
+        Home home = new Home(listOfChores, listOfMembers);
         home.choresAssignment();
         for (Member member: listOfMembers.getListOfMembers()) {
             System.out.println(member.getName() + " has been assigned the Chore: " + member.getAssignedChore());
