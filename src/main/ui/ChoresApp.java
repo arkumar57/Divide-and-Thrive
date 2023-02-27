@@ -17,6 +17,8 @@ public class ChoresApp {
 
     }
 
+    // MODIFIES: this
+    // EFFECTS: processes user input
     private void runChore() {
         boolean keepGoing = true;
         String command;
@@ -51,7 +53,7 @@ public class ChoresApp {
     }
 
     // MODIFIES: this
-    // EFFECTS: initializes
+    // EFFECTS: initializes ChoresApp
     private void init() {
         input = new Scanner(System.in);
         input.useDelimiter("\n");
@@ -65,6 +67,8 @@ public class ChoresApp {
         System.out.println("\tl -> get list of Members");
     }
 
+    // MODIFIES: this
+    // EFFECTS: Adds Members to listOfMembers if quantity of Members >= 2 and calls addChores()
     private void addMembers() {
         System.out.println("Enter No of Members in House: ");
         int quantity = input.nextInt();
@@ -84,6 +88,8 @@ public class ChoresApp {
         }
     }
 
+    // MODIFIES: this
+    // EFFECTS: add the chores to the listOfChores
     private void addChores() {
         listOfChores = new ChoresList();
 
@@ -96,6 +102,8 @@ public class ChoresApp {
         assignment();
     }
 
+    // MODIFIES: this
+    // EFFECTS: assign chores randomly to members
     private void assignment() {
         Home home = new Home(listOfChores, listOfMembers);
         home.choresAssignment();
@@ -104,6 +112,9 @@ public class ChoresApp {
         }
     }
 
+    // REQUIRES: listOfMembers is not empty
+    // MODIFIES: this
+    // EFFECTS: print listOfMembers
     private void printListOfMembers() {
         Home home = new Home(listOfChores,listOfMembers);
         List<Member> members = home.getListOfMembers().getListOfMembers();

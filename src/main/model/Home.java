@@ -20,7 +20,7 @@ public class Home {
         return listOfChores;
     }
 
-    //Modifies:this,Chore,Member
+    //Modifies:this,chore,member
     //Effects:Shuffles the chores in the Arraylist of Chores and assigns randomly to members in the arraylist of Members
     public void choresAssignment() {
         List<Chore> chores = listOfChores.getListOfChores();

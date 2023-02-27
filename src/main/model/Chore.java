@@ -24,8 +24,7 @@ public class Chore {
         this.assignedMember = assignedMember;
     }
 
-
-
+    @Override
     public String toString() {
         return name;
     }
