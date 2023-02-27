@@ -1,13 +1,9 @@
 package model;
 
-import java.util.ArrayList;
-import java.util.List;
 
 public class Member {
-    private String name;
+    private final String name;
     private String assignedChore;
-
-    private List<Member> listOfMembers = new ArrayList<>();
 
     public Member(String name,String assignedChore) {
         this.name = name;
@@ -26,9 +22,7 @@ public class Member {
         return name;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
+
 
 
 

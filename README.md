@@ -20,10 +20,10 @@ Why is this project of Interest to you?
 
 ## USER STORIES
 As a user, I will be able to:
-- As a user, I will be able to add chores into the program
-- As a user,I will be able to add other house members in the program.
-- As a user, I will be able to distribute tasks among the house members.
+- As a user, I will be able to add chores into the chores list in the program.
+- As a user,I will be able to add other house members in the members list in the program.
+- As a user, I will be able to randmoly distribute tasks among the house members.
 - As a user, I will be able to see the list of members in the house.
-- As a user, I will be able to see the list of chores of the house.
+
 
   

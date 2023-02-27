@@ -1,6 +1,5 @@
 package model;
 
-import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
@@ -13,31 +12,21 @@ public class Home {
         this.listOfMembers = listOfMembers;
     }
 
-
-    public void setListOfMembers(MembersList listOfMembers) {
-        this.listOfMembers = listOfMembers;
+    public MembersList getListOfMembers() {
+        return listOfMembers;
     }
-
-    public void setListOfChores(ChoresList listOfChores) {
-        this.listOfChores = listOfChores;
-    }
-
 
     public ChoresList getListOfChores() {
         return listOfChores;
     }
 
-    public MembersList getListOfMembers() {
-        return listOfMembers;
-    }
-
-
+    //Modifies:this,Chore,Member
+    //Effects:Shuffles the chores in the Arraylist of Chores and assigns randomly to members in the arraylist of Members
     public void choresAssignment() {
         List<Chore> chores = listOfChores.getListOfChores();
         List<Member> members = listOfMembers.getListOfMembers();
 
         Collections.shuffle(chores);
-        Collections.shuffle(members);
 
         for (int i = 0;i < chores.size(); i++) {
             Chore chore = chores.get(i);
@@ -46,5 +35,4 @@ public class Home {
             member.setAssignedChore(String.valueOf(chore));
         }
     }
-
 }

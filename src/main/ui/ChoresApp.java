@@ -3,7 +3,6 @@ package ui;
 import model.*;
 import model.Home;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
@@ -16,6 +15,7 @@ public class ChoresApp {
 
     public ChoresApp() {
         runChore();
+
     }
 
     private void runChore() {
@@ -44,13 +44,15 @@ public class ChoresApp {
     private void processCommand(String command) {
         if (command.equals("a")) {
             addMembers();
+        } else if (command.equals("l")) {
+            printListOfMembers();
         } else {
             System.out.println("Selection not valid...");
         }
     }
 
     // MODIFIES: this
-    // EFFECTS: initializes accounts
+    // EFFECTS: initializes
     private void init() {
         input = new Scanner(System.in);
         input.useDelimiter("\n");
@@ -61,6 +63,7 @@ public class ChoresApp {
         System.out.println("\nSelect from:");
         System.out.println("\ta -> Assign Chores Randomly to Members");
         System.out.println("\tq -> quit");
+        System.out.println("\tl -> get list of Members");
     }
 
     private void addMembers() {
@@ -100,8 +103,17 @@ public class ChoresApp {
         for (Member member: listOfMembers.getListOfMembers()) {
             System.out.println(member.getName() + " has been assigned the Chore: " + member.getAssignedChore());
         }
-
     }
+
+    private void printListOfMembers() {
+        Home home = new Home(listOfChores,listOfMembers);
+        List<Member> members = home.getListOfMembers().getListOfMembers();
+        System.out.println("list of Members: ");
+        for (Member member: members) {
+            System.out.println(member.getName());
+        }
+    }
+
 }
 
 

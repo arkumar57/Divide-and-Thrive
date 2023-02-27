@@ -10,20 +10,16 @@ public class ChoresList {
         this.listOfChores = listOfChores;
     }
 
-    public void setListOfChores(List<Chore> listOfChores) {
-        this.listOfChores = listOfChores;
-    }
 
     public List<Chore> getListOfChores() {
         return listOfChores;
     }
 
+    //Modifies:this
+    //Effects:Adds chores to the Arraylist of chores.
+
     public void addChore(Chore a) {
         listOfChores.add(a);
     }
-
-    public void removeChore(Chore r) {
-        listOfChores.remove(r);
-    }
-
 }
+

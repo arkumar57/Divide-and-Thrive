@@ -15,15 +15,10 @@ public class MembersList {
         return listOfMembers;
     }
 
-    public void setListOfMembers(List<Member> listOfMembers) {
-        this.listOfMembers = listOfMembers;
-    }
 
+    //Modifies:this
+    //Effects:add members to the ArrayList of Members.
     public void addMember(Member a) {
         listOfMembers.add(a);
-    }
-
-    public void removeMember(Member r) {
-        listOfMembers.remove(r);
     }
 }
