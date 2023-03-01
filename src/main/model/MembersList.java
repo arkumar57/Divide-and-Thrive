@@ -3,6 +3,9 @@ package model;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Represents a list of members
+ */
 public class MembersList {
 
     private final List<Member> listOfMembers = new ArrayList<>();

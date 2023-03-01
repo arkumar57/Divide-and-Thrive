@@ -3,10 +3,17 @@ package model;
 import java.util.Collections;
 import java.util.List;
 
+/**
+ * Represents allocation of list of chores to list of members.
+ */
 public class Home {
     private final ChoresList listOfChores;
     private final MembersList listOfMembers;
 
+    /**
+     *listOfChores in Home is set to listOfChores
+     *listOfMembers in Home is set to listOfMembers
+     */
     public Home(ChoresList listOfChores,MembersList listOfMembers) {
         this.listOfChores = listOfChores;
         this.listOfMembers = listOfMembers;

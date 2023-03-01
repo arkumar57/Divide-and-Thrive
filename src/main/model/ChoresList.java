@@ -3,6 +3,9 @@ package model;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Represents a list of Chores.
+ */
 public class ChoresList {
     private final List<Chore> listOfChores = new ArrayList<>();
 

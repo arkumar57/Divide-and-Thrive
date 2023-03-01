@@ -5,6 +5,9 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
+/**
+ * Represents test for ChoresList
+ */
 public class ChoresListTest {
     private ChoresList choresList1;
     private ChoresList choresList2;

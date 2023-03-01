@@ -6,12 +6,17 @@ import model.Home;
 import java.util.List;
 import java.util.Scanner;
 
+/**
+ * Represents a user interface for Chores App.
+ */
 public class ChoresApp {
     private Scanner input;
     private ChoresList listOfChores;
     private MembersList listOfMembers;
 
-
+    /**
+     * Calls runChore.
+     */
     public ChoresApp() {
         runChore();
 
