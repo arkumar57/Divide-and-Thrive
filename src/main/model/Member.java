@@ -1,9 +1,12 @@
 package model;
 
+import org.json.JSONObject;
+import persistence.Writable;
+
 /**
  * Represents a Member
  */
-public class Member {
+public class Member implements Writable {
     private final String name;
     private String assignedChore;
 
@@ -28,10 +31,13 @@ public class Member {
         return name;
     }
 
-
-
-
-
+    @Override
+    public JSONObject toJson() {
+        JSONObject json = new JSONObject();
+        json.put("name", name);
+        json.put("assignedChore", assignedChore);
+        return json;
+    }
 
 
 }

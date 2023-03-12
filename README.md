@@ -23,9 +23,11 @@ hence it will them to build up their skill set.
 ## USER STORIES
 As a user, I will be able to:
 - As a user, I will be able to add chores into the chores list in the program.
-- As a user,I will be able to add other house members in the members list in the program.
+- As a user, I will be able to add other house members in the members list in the program.
 - As a user, I will be able to randomly distribute tasks among the house members.
 - As a user, I will be able to see the list of members in the house.
+- As a user, I will be able to save the Members, Chores, and Allocation of chores to Members.
+- As a user, I will be able to load back all the Members, Chores, and Allocation of Chores to Members.
 
 
   

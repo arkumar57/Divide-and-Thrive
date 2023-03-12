@@ -1,9 +1,12 @@
 package model;
 
+import org.json.JSONObject;
+import persistence.Writable;
+
 /**
  * / represents a Chore
  */
-public class Chore {
+public class Chore implements Writable {
     private final String name;
     private String assignedMember;
 
@@ -34,4 +37,11 @@ public class Chore {
         return name;
     }
 
+    @Override
+    public JSONObject toJson() {
+        JSONObject json = new JSONObject();
+        json.put("name", name);
+        json.put("assignedMember", assignedMember);
+        return json;
+    }
 }
