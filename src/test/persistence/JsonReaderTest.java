@@ -4,12 +4,11 @@ import model.Home;
 import org.junit.jupiter.api.Test;
 
 import java.io.IOException;
-import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.fail;
 
-public class JsonReaderTest extends JsonTest{
+public class JsonReaderTest {
 
     @Test
     void testReaderNonExistentFile() {
@@ -34,6 +33,20 @@ public class JsonReaderTest extends JsonTest{
         }
     }
 
+    @Test
+    void testReaderGeneralWorkRoom() {
+        JsonReader reader = new JsonReader("./data/testReaderGeneralHome.json");
+        try {
+            Home hm = reader.read();
+            assertEquals(2,hm.getListOfChores().getListOfChores().size());
+            assertEquals(2,hm.getListOfMembers().getListOfMembers().size());
+            assertEquals("arun",hm.getListOfMembers().getListOfMembers().get(0).getName());
+            assertEquals("Dishes",hm.getListOfChores().getListOfChores().get(1).toString());
+
+        } catch (IOException e) {
+            fail("Couldn't read from file");
+        }
+    }
 
 
 

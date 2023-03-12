@@ -39,7 +39,7 @@ public class JsonReader {
         return contentBuilder.toString();
     }
 
-    private Home parseHome(JSONObject jsonObject) throws IOException {
+    private Home parseHome(JSONObject jsonObject) {
         ChoresList c = new ChoresList();
         MembersList m = new MembersList();
 

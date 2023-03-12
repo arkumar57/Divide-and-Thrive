@@ -1,0 +1,22 @@
+{
+  "listOfChores": [
+    {
+      "name": "Washing",
+      "assignedMember": "arun"
+    },
+    {
+      "name": "Dishes" ,
+      "assignedMember": "kumar"
+    }
+  ] ,
+  "listOfMembers": [
+    {
+      "name": "arun",
+      "assignedChore": "Washing"
+    },
+    {
+      "name": "kumar",
+      "assignedChore": "Dishes"
+    }
+  ]
+}

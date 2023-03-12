@@ -5,15 +5,14 @@ import org.json.JSONObject;
 import persistence.Writable;
 
 import java.util.Collections;
-import java.util.Iterator;
 import java.util.List;
 
 /**
  * Represents allocation of list of chores to list of members.
  */
 public class Home implements Writable {
-    private final ChoresList listOfChores;
-    private final MembersList listOfMembers;
+    private  ChoresList listOfChores;
+    private  MembersList listOfMembers;
 
     /**
      *listOfChores in Home is set to listOfChores
@@ -57,25 +56,22 @@ public class Home implements Writable {
     }
 
 
-    // EFFECTS: returns things in this workroom as a JSON array
+    // EFFECTS: returns Members in this Home as a JSON array
     private JSONArray listOfMembersToJson() {
         JSONArray jsonArray = new JSONArray();
-        Iterator var2 = this.listOfMembers.getListOfMembers().iterator();
 
-        while (var2.hasNext()) {
-            Member t = (Member) var2.next();
+        for (Member t : listOfMembers.getListOfMembers()) {
             jsonArray.put(t.toJson());
         }
+
         return jsonArray;
     }
 
-    // EFFECTS: returns things in this workroom as a JSON array
+    // EFFECTS: returns Chores in this Home as a JSON array
     private JSONArray listOfChoresToJson() {
         JSONArray jsonArray = new JSONArray();
-        Iterator var2 = this.listOfChores.getListOfChores().iterator();
 
-        while (var2.hasNext()) {
-            Chore t = (Chore) var2.next();
+        for (Chore t : listOfChores.getListOfChores()) {
             jsonArray.put(t.toJson());
         }
 

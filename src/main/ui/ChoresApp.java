@@ -152,10 +152,10 @@ public class ChoresApp {
     }
 
     private void printListOfChores() {
-        List<Member> members = home.getListOfMembers().getListOfMembers();
+        List<Chore> chores = home.getListOfChores().getListOfChores();
         System.out.println("list of Chores: ");
-        for (Member member: members) {
-            System.out.println(member.getAssignedChore());
+        for (Chore chore: chores) {
+            System.out.println(chore.toString());
         }
     }
 
