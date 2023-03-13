@@ -19,6 +19,8 @@ Why is this project of Interest to you?
 - Using this app will make the mutual tasks interesting as every single member will get a random task and 
 hence it will them to build up their skill set.
 
+References: 
+The UI and the persistence package was derived from the existing JSON Demo which was provided on EdX. 
 
 ## USER STORIES
 As a user, I will be able to:

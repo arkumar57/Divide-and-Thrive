@@ -151,6 +151,9 @@ public class ChoresApp {
         }
     }
 
+    // REQUIRES: listOfChores is not empty
+    // MODIFIES: this
+    // EFFECTS: print listOfChores
     private void printListOfChores() {
         List<Chore> chores = home.getListOfChores().getListOfChores();
         System.out.println("list of Chores: ");
@@ -159,6 +162,7 @@ public class ChoresApp {
         }
     }
 
+    // EFFECTS: saves the home to file
     private void saveHome() {
         try {
             this.jsonWriter.open();
@@ -171,6 +175,8 @@ public class ChoresApp {
 
     }
 
+    // MODIFIES: this
+    // EFFECTS: loads home from file
     private void loadHome() {
         try {
             this.home = this.jsonReader.read();

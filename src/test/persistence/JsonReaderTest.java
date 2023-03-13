@@ -8,8 +8,14 @@ import java.io.IOException;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.fail;
 
+/**
+ * / Tests the JSON reader
+ */
 public class JsonReaderTest {
 
+    /**
+     * / test non existent file
+     */
     @Test
     void testReaderNonExistentFile() {
         JsonReader reader = new JsonReader("./data/noSuchFile.json");
@@ -21,8 +27,12 @@ public class JsonReaderTest {
         }
     }
 
+    /**
+     * / test reader empty home file
+     */
+
     @Test
-    void testReaderEmptyWorkRoom() {
+    void testReaderEmptyHome() {
         JsonReader reader = new JsonReader("./data/testReaderEmptyHome.json");
         try {
             Home hm = reader.read();
@@ -33,8 +43,12 @@ public class JsonReaderTest {
         }
     }
 
+    /**
+     * / test reader general Home file
+     */
+
     @Test
-    void testReaderGeneralWorkRoom() {
+    void testReaderGeneralHome() {
         JsonReader reader = new JsonReader("./data/testReaderGeneralHome.json");
         try {
             Home hm = reader.read();

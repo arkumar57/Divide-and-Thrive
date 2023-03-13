@@ -11,7 +11,9 @@ import java.util.stream.Stream;
 
 import org.json.*;
 
-// Represents a reader that reads workroom from JSON data stored in file
+/**
+ * / Represents a reader that reads home from JSON data stored in file
+ */
 public class JsonReader {
     private String source;
 
@@ -20,7 +22,7 @@ public class JsonReader {
         this.source = source;
     }
 
-    // EFFECTS: reads workroom from file and returns it;
+    // EFFECTS: reads home from file and returns it;
     // throws IOException if an error occurs reading data from file
     public Home read() throws IOException {
         String jsonData = readFile(source);
@@ -39,6 +41,7 @@ public class JsonReader {
         return contentBuilder.toString();
     }
 
+    // EFFECTS: parses home from JSON object and returns it
     private Home parseHome(JSONObject jsonObject) {
         ChoresList c = new ChoresList();
         MembersList m = new MembersList();
@@ -49,6 +52,8 @@ public class JsonReader {
         return hm;
     }
 
+    // MODIFIES: hm
+    // EFFECTS: parses members from JSON object and adds them to home
     private void addMembers(MembersList m, JSONObject jsonObject) {
         JSONArray jsonArray = jsonObject.getJSONArray("listOfMembers");
         for (Object json : jsonArray) {
@@ -60,6 +65,8 @@ public class JsonReader {
         }
     }
 
+    // MODIFIES: hm
+    // EFFECTS: parses chores from JSON object and adds them to home
     private void addChores(ChoresList c, JSONObject jsonObject) {
         JSONArray jsonArray = jsonObject.getJSONArray("listOfChores");
         for (Object json : jsonArray) {

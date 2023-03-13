@@ -10,6 +10,9 @@ import java.io.IOException;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.fail;
 
+/**
+ * / test JSON writer
+ */
 public class JsonWriterTest {
 
     private ChoresList choresList;
@@ -22,6 +25,10 @@ public class JsonWriterTest {
     }
 
 
+
+    /**
+     * / test invalid file
+     */
     @Test
     void testWriterInvalidFile() {
 
@@ -35,6 +42,10 @@ public class JsonWriterTest {
         }
     }
 
+
+    /**
+     * / Test Empty home file
+     */
     @Test
     void testWriterEmptyHome() {
         try {
@@ -52,6 +63,10 @@ public class JsonWriterTest {
             fail("Exception should not have been thrown");
         }
     }
+
+    /**
+     * / test a general home file
+     */
 
     @Test
     void testWriterGeneralHome() {

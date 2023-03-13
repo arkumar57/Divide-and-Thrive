@@ -6,7 +6,9 @@ import org.json.JSONObject;
 
 import java.io.*;
 
-// Represents a writer that writes JSON representation of workroom to file
+/**
+ * /Represents a writer that writes JSON representation of home to file
+  */
 public class JsonWriter {
     private PrintWriter writer;
     private String destination;
@@ -24,7 +26,7 @@ public class JsonWriter {
     }
 
     // MODIFIES: this
-    // EFFECTS: writes JSON representation of workroom to file
+    // EFFECTS: writes JSON representation of home to file
     public void write(Home hm) {
         JSONObject json = hm.toJson();
         saveToFile(json.toString());
