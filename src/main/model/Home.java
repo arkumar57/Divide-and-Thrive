@@ -11,8 +11,8 @@ import java.util.List;
  * Represents allocation of list of chores to list of members.
  */
 public class Home implements Writable {
-    private  ChoresList listOfChores;
-    private  MembersList listOfMembers;
+    private ChoresList listOfChores;
+    private MembersList listOfMembers;
 
     /**
      *listOfChores in Home is set to listOfChores

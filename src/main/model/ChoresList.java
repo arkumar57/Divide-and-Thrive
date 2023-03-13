@@ -7,7 +7,7 @@ import java.util.List;
  * Represents a list of Chores.
  */
 public class ChoresList {
-    private List<Chore> listOfChores = new ArrayList<>();
+    private final List<Chore> listOfChores = new ArrayList<>();
 
     public List<Chore> getListOfChores() {
         return listOfChores;
