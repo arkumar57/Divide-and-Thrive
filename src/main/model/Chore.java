@@ -7,7 +7,7 @@ import persistence.Writable;
  * / represents a Chore
  */
 public class Chore implements Writable {
-    private final String name;
+    private String name;
     private String assignedMember;
 
     // name is the task which A member of Home performs

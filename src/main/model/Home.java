@@ -31,6 +31,15 @@ public class Home implements Writable {
         return listOfChores;
     }
 
+    public void addMember(Member member) {
+        this.listOfMembers.addMember(member);
+    }
+
+    public void addChore(Chore chore) {
+        this.listOfChores.addChore(chore);
+    }
+
+
     //Modifies:this,chore,member
     //Effects:Shuffles the chores in the Arraylist of Chores and assigns randomly to members in the arraylist of Members
     public void choresAssignment() {

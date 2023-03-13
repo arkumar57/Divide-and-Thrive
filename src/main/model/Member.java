@@ -7,7 +7,7 @@ import persistence.Writable;
  * Represents a Member
  */
 public class Member implements Writable {
-    private final String name;
+    private String name;
     private String assignedChore;
 
     /**

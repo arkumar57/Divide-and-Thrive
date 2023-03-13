@@ -14,7 +14,7 @@ import java.util.Scanner;
  * Represents a user interface for Chores App.
  */
 public class ChoresApp {
-    private static final String JSON_STORE = "./data/home.json";
+    private static String JSON_STORE = "./data/home.json";
     private Scanner input;
     private ChoresList listOfChores = new ChoresList();
     private MembersList listOfMembers = new MembersList();
@@ -109,7 +109,7 @@ public class ChoresApp {
                 System.out.println("Enter name of house Member No" + i);
                 String name = input.nextLine();
                 Member member = new Member(name,null);
-                listOfMembers.addMember(member);
+                this.home.addMember(member);
             }
         } else {
             System.out.println("The Number of Member should be at least 2...\n");
@@ -121,13 +121,15 @@ public class ChoresApp {
     private void addChores() {
 
         int choresAdded = listOfChores.getListOfChores().size();
-        int choresToAdd = listOfMembers.getListOfMembers().size() - listOfChores.getListOfChores().size();
+        int choresToAdd = home.getListOfMembers().getListOfMembers().size()
+                - home.getListOfChores().getListOfChores().size();
+
 
         for (int i = 0; i < choresToAdd; i++) {
             System.out.println("Enter name of House Chore No:" + (choresAdded + i + 1));
             String name = input.next();
             Chore chore = new Chore(name, null);
-            listOfChores.addChore(chore);
+            this.home.addChore(chore);
         }
     }
 
@@ -179,7 +181,8 @@ public class ChoresApp {
     // EFFECTS: loads home from file
     private void loadHome() {
         try {
-            this.home = this.jsonReader.read();
+            jsonReader = new JsonReader(JSON_STORE);
+            this.home = jsonReader.read();
             System.out.println("Loaded " + this.home + " from ./data/home.json");
         } catch (IOException var2) {
             System.out.println("Unable to read from file: ./data/home.json");

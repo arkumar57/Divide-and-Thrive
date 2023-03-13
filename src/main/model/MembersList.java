@@ -8,7 +8,7 @@ import java.util.List;
  */
 public class MembersList {
 
-    private final List<Member> listOfMembers = new ArrayList<>();
+    private List<Member> listOfMembers = new ArrayList<>();
 
 
 
