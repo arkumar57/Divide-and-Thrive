@@ -23,7 +23,7 @@ public class ChoresGUI extends JFrame implements ActionListener {
     private JButton listofchores = new JButton("List Of Chores");
     private JButton saveData = new JButton("Save Data");
     private JButton loadData = new JButton("load Data");
-    ImageIcon icon = new ImageIcon("./data/projectImage.webp");
+    ImageIcon icon = new ImageIcon("./data/projectImage.jpg");
     JLabel label = new JLabel(icon);
 
     private static String JSON_STORE = "./data/home.json";
@@ -64,6 +64,9 @@ public class ChoresGUI extends JFrame implements ActionListener {
         loadData.setFocusable(false);
         loadData.addActionListener(this);
 
+        frame.setContentPane(label);
+
+
         frame.add(addChores);
         frame.add(addMembers);
         frame.add(assignChores);
@@ -72,11 +75,14 @@ public class ChoresGUI extends JFrame implements ActionListener {
         frame.add(saveData);
         frame.add(loadData);
 
-        frame.setLayout(null);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(420,700);
         frame.setVisible(true);
-        frame.add(label);
+
+
+
+
+        frame.repaint();
 
         this.jsonWriter = new JsonWriter("./data/home.json");
         this.jsonReader = new JsonReader("./data/home.json");

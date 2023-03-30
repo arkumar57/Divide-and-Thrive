@@ -2,8 +2,10 @@ package model;
 
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.assertNotNull;
-import static org.junit.jupiter.api.Assertions.assertNull;
+import java.util.function.BooleanSupplier;
+import java.util.function.Supplier;
+
+import static org.junit.jupiter.api.Assertions.*;
 
 /**
  * Represents test for Home
@@ -25,6 +27,8 @@ class HomeTest {
         home.getListOfMembers().addMember(arun);
         home.getListOfMembers().addMember(kumar);
         home.choresAssignment();
+
+
 
         for (Chore chore: home.getListOfChores().getListOfChores()) {
             assertNotNull(chore.getAssignedMember());

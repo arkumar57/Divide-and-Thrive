@@ -33,11 +33,11 @@ As a user, I will be able to:
 
 ## Instructions for Grader
 
-- You can generate the first required action related to adding Xs to a Y by...
-- You can generate the second required action related to adding Xs to a Y by...
-- You can locate my visual component by...
-- You can save the state of my application by...
-- You can reload the state of my application by...
+- You can generate the first required action related to adding Xs to a Y by clicking to add Members.
+- You can generate the second required action related to adding Xs to a Y by clicking to add Chores.
+- You can locate my visual component by running the program, visible on main frame.
+- You can save the state of my application by clicking on save Data.
+- You can reload the state of my application by clicking on Load Data.
 
 
   
