@@ -48,3 +48,8 @@ Members Added to list.
 Thu Apr 13 12:34:13 PDT 2023
 Members Added to list.
 JFrame Closed!
+
+## Phase 4: Task 3
+
+I added a UML Class diagram which represents the association amongst the classes.
+I will just refactor my code by making it more efficient by removing classes which may not be necessary.
