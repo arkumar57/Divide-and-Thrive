@@ -21,5 +21,6 @@ public class MembersList {
     //Effects:add members to the ArrayList of Members.
     public void addMember(Member a) {
         listOfMembers.add(a);
+        EventLog.getInstance().logEvent(new Event("Members Added to list."));
     }
 }

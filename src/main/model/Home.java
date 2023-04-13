@@ -24,10 +24,12 @@ public class Home implements Writable {
     }
 
     public MembersList getListOfMembers() {
+        EventLog.getInstance().logEvent(new Event("Display list of Members"));
         return listOfMembers;
     }
 
     public ChoresList getListOfChores() {
+        EventLog.getInstance().logEvent(new Event("Display list of Chores"));
         return listOfChores;
     }
 
@@ -54,6 +56,8 @@ public class Home implements Writable {
             chore.setAssignedMember(member.getName());
             member.setAssignedChore(String.valueOf(chore));
         }
+
+        EventLog.getInstance().logEvent(new Event("Chores Assigned to Members."));
     }
 
     @Override

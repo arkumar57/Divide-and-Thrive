@@ -5,12 +5,13 @@ import persistence.JsonReader;
 import persistence.JsonWriter;
 
 import javax.swing.*;
-import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.WindowAdapter;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Scanner;
 
@@ -40,7 +41,22 @@ public class ChoresGUI extends JFrame implements ActionListener {
         frameSet();
         this.jsonWriter = new JsonWriter("./data/home.json");
         this.jsonReader = new JsonReader("./data/home.json");
+
+        frame.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
+        frame.addWindowListener(new java.awt.event.WindowAdapter() {
+            @Override
+            public void windowClosing(java.awt.event.WindowEvent e) {
+                e.getWindow().dispose();
+                Iterator<Event> eventIterator = EventLog.getInstance().iterator();
+                while (eventIterator.hasNext()) {
+                    System.out.println(eventIterator.next());
+                }
+                System.out.println("JFrame Closed!");
+            }
+        });
     }
+
+
 
 
     // MODIFIES: this

@@ -40,4 +40,11 @@ As a user, I will be able to:
 - You can reload the state of my application by clicking on Load Data.
 
 
-  
+## Phase 4: Task 2
+Thu Apr 13 12:34:08 PDT 2023
+Members Added to list.
+Thu Apr 13 12:34:10 PDT 2023
+Members Added to list.
+Thu Apr 13 12:34:13 PDT 2023
+Members Added to list.
+JFrame Closed!

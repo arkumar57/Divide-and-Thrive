@@ -18,6 +18,7 @@ public class ChoresList {
 
     public void addChore(Chore a) {
         listOfChores.add(a);
+        EventLog.getInstance().logEvent(new Event("Chores Added to list."));
     }
 }
 
